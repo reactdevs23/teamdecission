@@ -1,0 +1,76 @@
+.teamMain {
+  background: #f7f7f7;
+  padding-top: 28px;
+}
+
+.teamMainInner {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.teamMainInner h2 {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+}
+
+.teamStatement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.teamProject {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 280px;
+  height: 324px;
+  padding-top: 106px;
+}
+
+.teamProject h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #000;
+}
+
+.userMain {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.stateReviews .stateMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.purpleReview,
+.pinkReview {
+  width: 28px;
+  height: 28px;
+  display: block;
+  background: #5d209e;
+  margin-right: 20px;
+}
+
+.pinkReview {
+  background: #e02d76;
+}
+
+.stateMain2 {
+  margin-left: 160px;
+}
+
+.stateReviews {
+  padding: 28px 0;
+}

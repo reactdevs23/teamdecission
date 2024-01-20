@@ -1,0 +1,67 @@
+.progressMid {
+  width: 50%;
+  padding: 0 20px;
+}
+.progressMidTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.progressMidTop h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: 8px;
+  max-width: 264px;
+}
+
+.progressMain {
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 32px;
+  background: #fff;
+  height: 100%;
+  min-height: 436px;
+}
+.progressMain h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-left: 12px;
+}
+.proMain2 .proMainInner,
+.proMainStart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progressInner {
+  border-left: 4px solid #000;
+  padding: 40px 0;
+}
+.progressPink {
+  width: 128px;
+  height: 40px;
+  background: #e02d76;
+}
+.progressPink2 {
+  width: 80px;
+}
+
+.progressPurple {
+  width: 160px;
+  height: 40px;
+  background: #5d209e;
+}
+
+.progressPurple2 {
+  width: 80px;
+  margin: 96px 0;
+}
