@@ -1,6 +1,8 @@
 .progressMid {
-  width: 50%;
-  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .progressMidTop {
   display: flex;
@@ -27,7 +29,7 @@
   padding: 32px;
   background: #fff;
   height: 100%;
-  min-height: 436px;
+  /* min-height: 436px; */
 }
 .progressMain h4 {
   font-size: 24px;
@@ -39,29 +41,26 @@
 .proMainStart {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  height: 100%;
+}
+.proMainInner {
+  gap: 25px;
 }
 
 .progressInner {
   border-left: 4px solid #000;
   padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
 }
-.progressPink {
-  width: 128px;
-  height: 40px;
-  background: #e02d76;
-}
-.progressPink2 {
-  width: 80px;
-}
+.statementContainer {
+  display: flex;
+  flex-direction: column;
 
-.progressPurple {
-  width: 160px;
-  height: 40px;
-  background: #5d209e;
-}
-
-.progressPurple2 {
-  width: 80px;
-  margin: 96px 0;
+  gap: 10px;
 }

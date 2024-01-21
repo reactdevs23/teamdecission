@@ -1,0 +1,4 @@
+.progress {
+  height: 40px;
+  transition: width 1.3s ease-out;
+}

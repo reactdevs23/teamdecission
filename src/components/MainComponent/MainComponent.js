@@ -1,17 +1,14 @@
 import React from "react";
-import CommonStatements from "../CommonStatements/CommonStatements";
-import UniqueStatements from "../UniqueStatements/UniqueStatements";
-import TotalStatementsOfEachPorject from "../TotalStatementsOfEachPorject/TotalStatementsOfEachPorject";
+
 import styles from "./MainComponent.module.css";
+import Statement from "../Statement/Statement";
 
 const MainComponent = ({
   title,
   projectsName,
-  commonStateMents,
-  uniqueStateMentToEachTeamMember,
-  totalStateMents,
 
-  statements,
+  allStatements,
+  statementTypes,
 }) => {
   return (
     <>
@@ -25,28 +22,22 @@ const MainComponent = ({
               ))}
             </div>
             <div className={styles.userMain}>
-              <CommonStatements {...commonStateMents} />
-              <UniqueStatements {...uniqueStateMentToEachTeamMember} />
-              <TotalStatementsOfEachPorject {...totalStateMents} />
+              {allStatements.map((el, i) => (
+                <Statement data={el} key={i} />
+              ))}
             </div>
           </div>
-          <div
-            className={`${styles.teamStatement} ${styles.statement2} ${styles.stateReviews}`}
-          >
-            <div className={styles.stateMain}>
-              <span
-                className={styles.purpleReview}
-                style={{ background: statements.positive.color }}
-              ></span>
-              <h4>{statements.positive.text}</h4>
-            </div>
-            <div className={`${styles.stateMain} ${styles.stateMain2}`}>
-              <span
-                className={`${styles.pinkReview}`}
-                style={{ background: statements.negative.color }}
-              ></span>
-              <h4>{statements.negative.text}</h4>
-            </div>
+
+          <div className={styles.statementTypes}>
+            {statementTypes.map((statement, i) => (
+              <div className={styles.stateMain} key={i}>
+                <span
+                  className={styles.review}
+                  style={{ background: statement.color }}
+                ></span>
+                <h4>{statement.text}</h4>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,12 +1,21 @@
 .teamMain {
   background: #f7f7f7;
-  padding-top: 28px;
+  padding: 50px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .teamMainInner {
   max-width: 1450px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 48px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .teamMainInner h2 {
@@ -17,10 +26,11 @@
 }
 
 .teamStatement {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+
+  grid-template-columns: auto 1fr;
   padding-top: 40px;
+  width: 100%;
 }
 
 .teamProject {
@@ -28,9 +38,12 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  width: 280px;
-  height: 324px;
-  padding-top: 106px;
+
+  height: calc(100% - 150px);
+  margin-top: auto;
+  padding: calc(40px + 32px) 0;
+  padding-bottom: 78px;
+  padding-right: 32px;
 }
 
 .teamProject h4 {
@@ -41,36 +54,30 @@
 }
 
 .userMain {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
   width: 100%;
   justify-content: space-between;
 }
 
-.stateReviews .stateMain {
+.statementTypes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 50px;
+}
+.stateMain {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 10px;
 }
-
-.purpleReview,
-.pinkReview {
+.review {
   width: 28px;
   height: 28px;
-  display: block;
-  background: #5d209e;
-  margin-right: 20px;
 }
-
-.pinkReview {
-  background: #e02d76;
-}
-
-.stateMain2 {
-  margin-left: 160px;
-}
-
 .stateReviews {
   padding: 28px 0;
 }
