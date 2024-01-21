@@ -1,9 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import styles from "./Statement.module.css"; // Replace with your actual CSS module path
-import { calculateMaxLegends, calculateWidth } from "../utils";
+import { calculateMaxLegends } from "../utils";
 import ProgressBar from "./ProgressBar/ProgressBar";
+import styles from "./Statement.module.css";
 
 const Statement = ({ data }) => {
   const maxLegends = calculateMaxLegends(data.statements);

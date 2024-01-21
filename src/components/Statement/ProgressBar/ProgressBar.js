@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-
-import styles from "./ProgressBar.module.css";
 import { calculateWidth } from "../../utils";
-
+import styles from "./ProgressBar.module.css";
 const ProgressBar = ({ legends, maxLegends, background }) => {
   const [progressValue, setProgressValue] = useState(0);
   const progressPercentage = progressValue + "%";
