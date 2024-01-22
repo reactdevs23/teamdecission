@@ -1,190 +1,188 @@
 import MainComponent from "./components/MainComponent/MainComponent";
 import {
-  faUser,
-  faUsers,
-  faListCheck,
+  faMicrochip,
+  faGamepad,
+  faDatabase,
 } from "@fortawesome/free-solid-svg-icons";
 function App() {
-  const teamDecisionData = {
-    title: "Team decision-making scenario",
-    projectsName: ["Project A", "Project B", "Project C"],
+  const cloudProviderCostData = {
+    title: "Cloud Provider Cost Comparison",
+    projectsName: ["AWS", "GCP", "MA"],
     statementTypes: [
       {
-        color: "#5d209e",
-        text: "Positive statements",
+        color: "#4caf50",
+        text: "Cost per Hour ($)",
       },
       {
-        color: "#e02d76",
-        text: "Negative statements",
+        color: "#f44336",
+        text: "Cost per Month ($)",
       },
     ],
-    allStatements: [
-      //common statements
+    allColumn: [
+      // First column - CPU Instances
       {
-        title: " Statements common to all team members",
-        icon: faUsers,
+        title: "CPU Instance Costs",
+        icon: faMicrochip, // Assuming you have an icon for CPU
 
-        statements: [
+        column: [
           [
-            // first project Statements
+            // CPU Instance Costs for different providers
             [
-              // type of statements
               {
-                type: "positive",
-                legends: 4,
-                color: "#5d209e",
+                type: "hourly",
+                numericValue: 0.24,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 175,
+                color: "#f44336",
+                width: "140px",
               },
             ],
-            // second project Statements
             [
-              // type of statements
-              { type: "positive", legends: 1, color: "#5d209e" },
-              { type: "negative", legends: 3, color: "#e02d76" },
-            ],
-            // third project Statements
-            [
-              // type of statements
-              { type: "positive", legends: 4, color: "#5d209e" },
-            ],
-          ],
-        ],
-      },
-      //unique statements
-      {
-        icon: faUser,
-        title: " Statements unique to each team member",
-
-        statements: [
-          [
-            // first project Statements
-            [
-              // type of statements
               {
-                name: "Project A",
-                type: "negative",
-                legends: 2,
-                color: "#e02d76",
+                type: "hourly",
+                numericValue: 0.22,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 140,
+                color: "#f44336",
+                width: "140px",
               },
             ],
-            // second project Statements
             [
-              // type of statements
               {
-                name: "Project B",
-                type: "positive",
-                legends: 2,
-                color: "#5d209e",
+                type: "hourly",
+                numericValue: 0.2,
+                color: "#4caf50",
+                width: "80px",
               },
-            ],
-            // second project Statements
-            [
-              // type of statements
               {
-                name: "Project C",
-                type: "negative",
-                legends: 2,
-                color: "#e02d76",
-              },
-            ],
-          ],
-
-          [
-            // first project Statements
-            [
-              // type of statements
-              {
-                name: "Project A",
-                type: "negative",
-                legends: 2,
-                color: "#e02d76",
-              },
-            ],
-            // second project Statements
-            [
-              // type of statements
-              {
-                name: "Project B",
-                type: "positive",
-                legends: 2,
-                color: "#5d209e",
-              },
-            ],
-            // second project Statements
-            [
-              // type of statements
-              {
-                name: "Project C",
-                type: "negative",
-                legends: 2,
-                color: "#e02d76",
-              },
-            ],
-          ],
-          [
-            // first project Statements
-            [
-              // type of statements
-              {
-                name: "Project A",
-                type: "negative",
-                legends: 2,
-                color: "#e02d76",
-              },
-            ],
-            // second project Statements
-            [
-              // type of statements
-              {
-                name: "Project B",
-                type: "positive",
-                legends: 2,
-                color: "#5d209e",
-              },
-            ],
-            // third project Statements
-            [
-              // type of statements
-              {
-                name: "Project C",
-                type: "negative",
-                legends: 2,
-                color: "#e02d76",
+                type: "monthly",
+                numericValue: 145,
+                color: "#f44336",
+                width: "140px",
               },
             ],
           ],
         ],
       },
-      //total statements
+      // Second column - GPU Instances
       {
-        icon: faListCheck,
-        title: "Total statements  for each project",
+        icon: faGamepad, // Assuming you have an icon for GPU
+        title: "GPU Instance Costs",
 
-        statements: [
+        column: [
           [
-            // first project Statements
+            // GPU Instance Costs for different providers
             [
-              // type of statements
-              { type: "positive", legends: 4, color: "#5d209e" },
-              { type: "negative", legends: 6, color: "#e02d76" },
+              {
+                type: "hourly",
+                numericValue: 0.9,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 100,
+                color: "#f44336",
+                width: "80px",
+              },
             ],
-            // second project Statements
             [
-              { type: "positive", legends: 7, color: "#5d209e" },
-              { type: "negative", legends: 3, color: "#e02d76" },
+              {
+                type: "hourly",
+                numericValue: 0.85,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 100,
+                color: "#f44336",
+                width: "80px",
+              },
             ],
-            // third project Statements
             [
-              { type: "positive", legends: 4, color: "#5d209e" },
-              { type: "negative", legends: 6, color: "#e02d76" },
+              {
+                type: "hourly",
+                numericValue: 0.8,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 100,
+                color: "#f44336",
+                width: "80px",
+              },
             ],
           ],
         ],
       },
-      // if you want to add more project you just have to add there
+      // Third column - Database Instances
+      {
+        icon: faDatabase, // Assuming you have an icon for Database
+        title: "Database Instance Costs",
+
+        column: [
+          [
+            // Database Instance Costs for different providers
+            [
+              {
+                type: "hourly",
+                numericValue: 0.3,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 220,
+                color: "#f44336",
+                width: "150px",
+              },
+            ],
+            [
+              {
+                type: "hourly",
+                numericValue: 0.28,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 205,
+                color: "#f44336",
+                width: "150px",
+              },
+            ],
+            [
+              {
+                type: "hourly",
+                numericValue: 0.26,
+                color: "#4caf50",
+                width: "80px",
+              },
+              {
+                type: "monthly",
+                numericValue: 190,
+                color: "#f44336",
+                width: "140px",
+              },
+            ],
+          ],
+        ],
+      },
+      // Additional columns can be added similarly for more comparisons
     ],
   };
 
-  return <MainComponent {...teamDecisionData} />;
+  return <MainComponent {...cloudProviderCostData} />;
 }
 
 export default App;

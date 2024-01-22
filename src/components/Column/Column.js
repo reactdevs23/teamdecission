@@ -1,32 +1,28 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { calculateMaxLegends } from "../utils";
+
 import ProgressBar from "./ProgressBar/ProgressBar";
-import styles from "./Statement.module.css";
+import styles from "./Column.module.css";
 
-const Statement = ({ data }) => {
-  const maxLegends = calculateMaxLegends(data.statements);
-
+const Column = ({ data }) => {
   return (
-    <div className={styles.progressMid}>
-      <div className={styles.progressMidTop}>
-        <FontAwesomeIcon icon={data.icon} size="3x" />
-        <h3>{data.title}</h3>
-      </div>
+    <div
+      className={`${styles.progressMid} ${
+        styles[`items-${data.column.length}`]
+      }  ${data.column.length > 3 && styles[`items-3`]}`}
+    >
       <div className={`${styles.progressMain} ${styles.proMain2}`}>
         <div className={styles.proMainInner}>
-          {data.statements.map((projects, id) => (
+          {data.column.map((projects, id) => (
             <div className={styles.progressInner} key={id}>
               {projects.map((project, projectId) => (
                 <div className={styles.statementContainer} key={projectId}>
                   {project.map((statement, statementId) => (
                     <div className={styles.proMainStart} key={statementId}>
                       <ProgressBar
-                        legends={statement.legends}
-                        maxLegends={maxLegends}
+                        width={statement.width}
                         background={statement.color}
                       />
-                      <h4>{statement.legends}</h4>
+                      <h4>{statement.numericValue}</h4>
                     </div>
                   ))}
                 </div>
@@ -39,4 +35,4 @@ const Statement = ({ data }) => {
   );
 };
 
-export default Statement;
+export default Column;

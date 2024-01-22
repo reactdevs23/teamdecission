@@ -35,14 +35,15 @@
 
 .teamProject {
   display: flex;
-  align-items: center;
+
   justify-content: space-between;
   flex-direction: column;
+  align-items: flex-end;
 
-  height: calc(100% - 150px);
+  height: calc(100% - 140px);
   margin-top: auto;
   padding: calc(40px + 32px) 0;
-  padding-bottom: 78px;
+  padding-bottom: 90px;
   padding-right: 32px;
 }
 
@@ -51,14 +52,19 @@
   line-height: 32px;
   font-weight: 700;
   color: #000;
+  text-align: right;
 }
 
 .userMain {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  /* display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr)); */
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
   gap: 20px;
   width: 100%;
   justify-content: space-between;
+  align-items: start;
 }
 
 .statementTypes {
@@ -80,4 +86,19 @@
 }
 .stateReviews {
   padding: 28px 0;
+}
+@media only screen and (max-width: 1440px) {
+  .teamMainInner h2 {
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+  }
+  .teamProject h4 {
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #000;
+    text-align: right;
+  }
 }

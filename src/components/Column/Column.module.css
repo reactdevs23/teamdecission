@@ -2,27 +2,25 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 5px;
+  width: 100%;
+  min-width: 200px;
 }
-.progressMidTop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.items-1 {
+  width: 100%;
 }
-
-.progressMidTop h3 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-  font-style: italic;
-  text-align: center;
-  padding-bottom: 20px;
-  margin-top: 8px;
-  max-width: 264px;
+.items-2 {
+  width: calc(100% * 1.2);
 }
 
+.items-3 {
+  width: calc(100% * 2.4);
+}
+
+/* ${
+        styles[`items-${data.statements.length}`]
+      }  ${data.statements.length > 6 && styles[`items-6`]} */
 .progressMain {
   border: 2px solid #000;
   border-radius: 8px;
@@ -30,12 +28,13 @@
   background: #fff;
   height: 100%;
   /* min-height: 436px; */
+  margin-top: auto;
 }
 .progressMain h4 {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  margin-left: 12px;
+  margin-left: 10px;
 }
 .proMain2 .proMainInner,
 .proMainStart {
@@ -45,7 +44,7 @@
   height: 100%;
 }
 .proMainInner {
-  gap: 25px;
+  gap: 18px;
 }
 
 .progressInner {
@@ -62,5 +61,14 @@
   display: flex;
   flex-direction: column;
 
-  gap: 10px;
+  gap: 8px;
+}
+@media only screen and (max-width: 1440px) {
+  .progressMain {
+    padding: 25px;
+  }
+  .progressMain h4 {
+    margin-left: 8px;
+    font-size: 22px;
+  }
 }

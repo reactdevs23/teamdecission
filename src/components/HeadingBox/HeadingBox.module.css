@@ -1,0 +1,29 @@
+.progressMidTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.progressMidTop h3 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+
+  margin-top: 8px;
+  max-width: 264px;
+}
+.items-1 {
+  width: 100%;
+}
+.items-2 {
+  width: calc(100% * 1.2);
+}
+
+.items-3 {
+  width: calc(100% * 2.4);
+}
