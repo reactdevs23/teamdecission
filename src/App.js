@@ -8,14 +8,14 @@ function App() {
   const cloudProviderCostData = {
     title: "Cloud Provider Cost Comparison",
     projectsName: ["AWS", "GCP", "MA"],
-    statementTypes: [
+    labels: [
       {
         color: "#4caf50",
-        text: "Cost per Hour ($)",
+        label: "Cost per Hour ($)",
       },
       {
         color: "#f44336",
-        text: "Cost per Month ($)",
+        label: "Cost per Month ($)",
       },
     ],
     allColumn: [

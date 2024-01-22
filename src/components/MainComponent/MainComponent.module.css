@@ -67,7 +67,7 @@
   align-items: start;
 }
 
-.statementTypes {
+.labelContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
@@ -86,6 +86,9 @@
 }
 .stateReviews {
   padding: 28px 0;
+}
+.stateMain {
+  text-align: center;
 }
 @media only screen and (max-width: 1440px) {
   .teamMainInner h2 {

@@ -9,7 +9,7 @@ const MainComponent = ({
   projectsName,
 
   allColumn,
-  statementTypes,
+  labels,
 }) => {
   return (
     <div className={styles.teamMain}>
@@ -35,14 +35,14 @@ const MainComponent = ({
           </div>
         </div>
 
-        <div className={styles.statementTypes}>
-          {statementTypes.map((statement, i) => (
+        <div className={styles.labelContainer}>
+          {labels.map((labels, i) => (
             <div className={styles.stateMain} key={i}>
               <span
                 className={styles.review}
-                style={{ background: statement.color }}
+                style={{ background: labels.color }}
               ></span>
-              <h4>{statement.text}</h4>
+              <h4>{labels.label}</h4>
             </div>
           ))}
         </div>
