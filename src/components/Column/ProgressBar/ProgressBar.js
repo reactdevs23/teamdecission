@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from "react";
-
+import { calculateWidthPercentage } from "../../utils";
 import styles from "./ProgressBar.module.css";
-const ProgressBar = ({ width, background }) => {
-  const [progressValue, setProgressValue] = useState(0);
-  // const progressPercentage = progressValue + "%";
+
+const ProgressBar = ({ value, maxValue, background }) => {
+  const [progressPercentage, setProgressPercentage] = useState("0%");
+  console.log(value);
+  useEffect(() => {
+    const percentage = calculateWidthPercentage(value, maxValue);
+    setProgressPercentage(percentage);
+  }, [value, maxValue]);
 
   const progressStyle = {
-    width: width,
+    width: progressPercentage,
     background: background,
+    height: "100%",
+    position: "relative",
   };
 
-  useEffect(() => {
-    setProgressValue(width);
-  }, [progressValue, width]);
   return (
-    <>
-      <div className={styles.progress} style={progressStyle} />
-    </>
+    <div className={styles.progress}>
+      <div style={progressStyle}>
+        {" "}
+        <h4>{value}</h4>
+      </div>
+    </div>
   );
 };
 
