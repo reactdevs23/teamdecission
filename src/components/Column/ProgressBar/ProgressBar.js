@@ -20,8 +20,7 @@ const ProgressBar = ({ value, maxValue, background }) => {
   return (
     <div className={styles.progress}>
       <div style={progressStyle}>
-        {" "}
-        <h4>{value}</h4>
+        <h4 className={styles.label}>{value}</h4>
       </div>
     </div>
   );

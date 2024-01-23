@@ -44,15 +44,7 @@
   height: 100%;
   position: relative;
 }
-.progressMain h4 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(100%, -50%);
-  font-size: 22px;
-  line-height: 32px;
-  font-weight: 700;
-}
+
 .proMainInner {
   gap: 18px;
 }

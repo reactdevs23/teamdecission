@@ -5,9 +5,9 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-right: 50px;
+  margin-right: 52px;
 }
-.progress h4 {
+.label {
   position: absolute;
   top: 50%;
   right: 0;
